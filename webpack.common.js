@@ -1,7 +1,6 @@
 
 module.exports = {
   entry: {
-    vendor: "./src/vendor.js",
     main: "./src/index.js"
   },
   module: {
@@ -15,7 +14,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[hash].[ext]",
-          outputPath: "imgs"
+          outputPath: "assets"
         }
       }
     ]

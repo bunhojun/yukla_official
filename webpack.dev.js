@@ -2,6 +2,7 @@ const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = merge(common, {
@@ -11,7 +12,9 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "public"),
     publicPath: ASSET_PATH
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new HtmlWebpackPlugin({
     template: "./src/index.html",
     favicon: "./src/assets/wolf.ico"
   })],
@@ -20,7 +23,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader"
         ]
       }
