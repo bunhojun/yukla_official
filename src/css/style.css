@@ -1,252 +1,251 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
 
 * {
-    margin: 0 auto;
-    color: #ffffff;
-    scroll-behavior: smooth;
+  margin: 0 auto;
+  color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow-y: scroll;
-    background-color: black;
-    text-align: center;
-    font-family: 'Cinzel', serif;
+  overflow-y: scroll;
+  background-color: black;
+  text-align: center;
+  font-family: "Cinzel", serif;
 }
 
 p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
-header {        
-    height: 100vh;
+header {
+  height: 100vh;
 }
 
 #logo-zone {
-    height: 100%;
+  height: 100%;
 }
 
 .wolf {
-    z-index: 1;
-    position: absolute;
-    top: 40vh;
-    transform: translate(-50%, -50%);
-    width: 20vw;
+  z-index: 1;
+  position: absolute;
+  top: 40vh;
+  transform: translate(-50%, -50%);
+  width: 20vw;
 }
 
 .play-button {
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-    top: 40vh;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    font-size: 20vw;
-    transition: 0.2s;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 40vh;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 20vw;
+  transition: 0.2s;
 }
 
 .play-button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 #nav-ul {
-    width: 30vw;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding-inline-start: 0;
-    margin-bottom: 0;
+  width: 30vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
+  margin-bottom: 0;
 }
 
-
 #nav-ul li a {
-    font-size: 1.3em;
-    text-decoration: none;
-    color: #ffffff;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #contents {
-    background: linear-gradient(135deg, #2a2a2a, #000000);
+  background: linear-gradient(135deg, #2a2a2a, #000000);
 }
 
 #contents section {
-    padding-top: 15vh;
-    padding-bottom: 25vh;
-    border-bottom: #2a2a2a solid 1px;
+  padding-top: 15vh;
+  padding-bottom: 25vh;
+  border-bottom: #2a2a2a solid 1px;
 }
 
 #home img {
-    width: 25vw;
+  width: 25vw;
 }
 
 #home p {
-    padding-top: 15vh;
+  padding-top: 15vh;
 }
 
 .home-br {
-    display: none;
+  display: none;
 }
 
 #about-container {
-    padding-top: 0;
-    width: 50vw;
-    position: relative;
-    display: inline-flex;
+  padding-top: 0;
+  width: 50vw;
+  position: relative;
+  display: inline-flex;
 }
 
 .iframe-container {
-    width: 50vw;
-    height: calc(50vw * 2 / 3);
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 50vw;
+  height: calc(50vw * 2 / 3);
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 iframe {
-    width: 50vw;
-    height: calc(50vw * 315 / 560);
+  width: 50vw;
+  height: calc(50vw * 315 / 560);
 }
 
-
 /* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-
 #about img {
-    width: 100%;
+  width: 100%;
 }
 
 #about p {
-    text-align: left;
-    margin-left: 2%;
+  text-align: left;
+  margin-left: 2%;
 }
 
 #information p img {
-    width: 100px;
+  width: 100px;
 }
 
 #information img {
-    width: 50vw;
+  width: 50vw;
 }
 
 footer {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    background-color: gray;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: gray;
 }
 
 #footer-logo {
-    width: 5vw;
+  width: 5vw;
 }
 
 .social-media {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .for-more {
-    width: 25vw;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 40px;
+  width: 25vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 40px;
 }
 
 .legal {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 0.5em;
 }
 
 @media screen and (max-width: 1080px) {
-    #nav-bar {
-        display: none;
-    }
+  #nav-bar {
+    display: none;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
-    .wolf {
-      width: 40vw;
-    }
+  .wolf {
+    width: 40vw;
+  }
 
-    .play-button {
-        font-size: 30vw;
-    }
+  .play-button {
+    font-size: 30vw;
+  }
 
-    #home img {
-      width: 50vw;
-    }
+  #home img {
+    width: 50vw;
+  }
 
-    .home-br {
-        display: inline;
-    }
+  .home-br {
+    display: inline;
+  }
 
-    h2 {
-        font-size: large;
-    }
+  h2 {
+    font-size: large;
+  }
 
-    p {
-      font-size: 1em;
-    }
+  p {
+    font-size: 1em;
+  }
 
-    #about-container, #information img{
-      width: 100%;
-    }
+  #about-container,
+  #information img {
+    width: 100%;
+  }
 
-    .iframe-container {
-        width: 100vw;
-        height: calc(100vw * 2 / 3);
-    }
+  .iframe-container {
+    width: 100vw;
+    height: calc(100vw * 2 / 3);
+  }
 
-    iframe {
-        width: 100vw;
-        height: calc(100vw * 315 / 560);
-    }
+  iframe {
+    width: 100vw;
+    height: calc(100vw * 315 / 560);
+  }
 
-    #information p img {
-        width: 60px;
-    }
+  #information p img {
+    width: 60px;
+  }
 
-    .for-more {
-        width: 45vw;
-        font-size: 35px;
-    }
+  .for-more {
+    width: 45vw;
+    font-size: 35px;
+  }
 
-    #footer-logo {
-      width: 15vw;
-    }
+  #footer-logo {
+    width: 15vw;
+  }
 
-    .legal {
-        font-size: 5px;
-    }
+  .legal {
+    font-size: 5px;
+  }
 }
