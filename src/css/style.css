@@ -186,6 +186,10 @@ footer {
   font-size: 0.5em;
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 1080px) {
   #nav-bar {
     display: none;

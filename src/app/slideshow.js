@@ -1,24 +1,24 @@
 let slideIndex = 1;
 
-function showDiv(n) {
-  const x = document.getElementsByClassName('js-slides');
-  if (n > x.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = x.length; }
-  for (let i = 0; i < x.length; i += 1) {
-    x[i].style.display = 'none';
+function showOneSlide(n) {
+  const slides = document.getElementsByClassName('js-slides');
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (let i = 0; i < slides.length; i += 1) {
+    slides[i].classList.add('hide');
   }
-  x[slideIndex - 1].style.display = 'block';
+  slides[slideIndex - 1].classList.remove('hide');
 }
 
 function plusSlides() {
-  showDiv(slideIndex += 1);
+  showOneSlide(slideIndex += 1);
 }
 
 function minusSlides() {
-  showDiv(slideIndex -= 1);
+  showOneSlide(slideIndex -= 1);
 }
 export default function initSlideShow() {
-  showDiv(slideIndex);
+  showOneSlide(slideIndex);
   const prevButton = document.querySelector('.js-prev-button');
   const nextButton = document.querySelector('.js-next-button');
   prevButton.addEventListener('click', minusSlides);

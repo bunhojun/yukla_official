@@ -61,7 +61,7 @@ const sketch = (p) => {
       p.ellipse(this.posX, this.posY, this.size);
     };
   }
-
+  /* eslint no-param-reassign: ["error", { "props": false }] */
   p.setup = () => {
     initSize();
     const canvas = p.createCanvas(width, heightOfLogoZone);
@@ -86,13 +86,15 @@ const sketch = (p) => {
     snowflakes.push(new SnowFlake()); // append snowflake object
 
     // loop through snowflakes with a for..of loop
-    for (const flake of snowflakes) {
+    snowflakes.forEach((flake) => {
       flake.update(t); // update snowflake position
       flake.display(); // draw snowflake
-    }
+    });
   };
 };
 
 export default function initHeader() {
+  /* eslint new-cap: ["error", { "newIsCap": false }] */
+  /* eslint no-new: 0 */
   new p5(sketch, logoZoneDom);
 }
