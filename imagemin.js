@@ -7,10 +7,10 @@ const imageminPngquant = require('imagemin-pngquant');
     destination: 'src/assets',
     plugins: [
       imageminJpegoptim({
-        max: 45,
+        max: 30,
       }),
       imageminPngquant({
-        quality: [0.5, 0.6],
+        quality: [0.3, 0.35],
       }),
     ],
   });
