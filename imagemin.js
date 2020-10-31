@@ -3,14 +3,17 @@ const imageminJpegoptim = require('imagemin-jpegoptim');
 const imageminPngquant = require('imagemin-pngquant');
 
 (async () => {
-  await imagemin(['images/*.{jpg,png}'], {
+  const isTooBig = process.argv[2] && process.argv[2] === 'warned';
+  const quality = isTooBig ? 15 : 30;
+  const path = isTooBig ? 'warned_images' : 'images';
+  await imagemin([`${path}/*.{jpg,png}`], {
     destination: 'src/assets',
     plugins: [
       imageminJpegoptim({
-        max: 30,
+        max: quality,
       }),
       imageminPngquant({
-        quality: [0.3, 0.35],
+        quality: [quality / 100, quality / 100],
       }),
     ],
   });
