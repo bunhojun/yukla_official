@@ -54,6 +54,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .nav-ul {
@@ -120,20 +121,22 @@ iframe {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  transform: translateY(-50%);
   padding: 16px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.4s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -155,8 +158,20 @@ iframe {
   width: 100px;
 }
 
+.information p {
+  margin: 40px 0;
+}
+
 .information img {
   width: 50vw;
+}
+
+.total-feedback {
+  margin-bottom: 40px;
+}
+
+.total-feedback img {
+  width: 30vw;
 }
 
 footer {
