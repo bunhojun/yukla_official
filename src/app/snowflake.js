@@ -4,7 +4,7 @@ let width; let
   heightOfLogoZone;
 const snowflakes = [];
 
-const playButton = document.querySelector('.play-button');
+const playButton = document.querySelector('.js-play-button');
 const audio = document.querySelector('audio');
 const logoZoneDom = document.getElementById('logo-zone');
 
