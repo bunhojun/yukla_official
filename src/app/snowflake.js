@@ -3,29 +3,11 @@ import p5 from 'p5';
 let width; let
   heightOfLogoZone;
 const snowflakes = [];
-
-const playButton = document.querySelector('.js-play-button');
-const audio = document.querySelector('audio');
 const logoZoneDom = document.getElementById('logo-zone');
 
 function initSize() {
   width = logoZoneDom.offsetWidth;
   heightOfLogoZone = logoZoneDom.offsetHeight;
-}
-
-function togglePlayButton() {
-  playButton.classList.toggle('fa-pause-circle');
-  playButton.classList.toggle('fa-play-circle');
-}
-
-function onPressPlay() {
-  const atr = playButton.getAttribute('class');
-  if (atr.includes('fa-play')) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-  togglePlayButton();
 }
 
 const sketch = (p) => {
@@ -61,16 +43,13 @@ const sketch = (p) => {
       p.ellipse(this.posX, this.posY, this.size);
     };
   }
+
   /* eslint no-param-reassign: ["error", { "props": false }] */
   p.setup = () => {
     initSize();
     const canvas = p.createCanvas(width, heightOfLogoZone);
     canvas.parent('logo-zone');
     p.noStroke();
-    playButton.addEventListener('click', onPressPlay);
-    audio.onended = () => {
-      togglePlayButton();
-    };
   };
 
   p.windowResized = () => {
@@ -93,7 +72,7 @@ const sketch = (p) => {
   };
 };
 
-export default function initHeader() {
+export default function initSnowFlake() {
   /* eslint new-cap: ["error", { "newIsCap": false }] */
   /* eslint no-new: 0 */
   new p5(sketch, logoZoneDom);

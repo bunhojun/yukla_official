@@ -1,6 +1,10 @@
+import initAudioPlayer from './app/audio-player';
 import initSlideShow from './app/slideshow';
-import initHeader from './app/snowflake';
+import initSnowFlake from './app/snowflake';
 import './main.css';
 
-initHeader();
-initSlideShow();
+window.onload = () => {
+  initSlideShow();
+  initAudioPlayer();
+  initSnowFlake();
+};

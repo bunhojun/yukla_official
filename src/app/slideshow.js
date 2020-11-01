@@ -17,6 +17,7 @@ function plusSlides() {
 function minusSlides() {
   showOneSlide(slideIndex -= 1);
 }
+
 export default function initSlideShow() {
   showOneSlide(slideIndex);
   const prevButton = document.querySelector('.js-prev-button');
