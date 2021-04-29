@@ -64,7 +64,7 @@ const sketch = (p) => {
 
     snowflakes.push(new SnowFlake()); // append snowflake object
 
-    // loop through snowflakes with a for..of loop
+    // loop through snowflakes with a for loop
     snowflakes.forEach((flake) => {
       flake.update(t); // update snowflake position
       flake.display(); // draw snowflake
